@@ -4,100 +4,138 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Grange Hall Capital</title>
-<meta name="description" content="Grange Hall Capital buys one founder-owned Wisconsin manufacturing or specialty services business, and runs it for the long term.">
+<meta name="description" content="Ian Markolf is looking to buy one founder-owned Wisconsin manufacturing or specialty services business and run it himself for the long term.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#F3F5F1; --ink:#1B2A24; --field:#2F5243; --muted:#56635D; --rule:#C9D0C8; --wheat:#A8843A;
-    --serif:"Libre Caslon Display", Georgia, serif;
-    --sans:"Public Sans", system-ui, sans-serif;
+    --display:"Jost","Futura",system-ui,sans-serif;
+    --sans:"Public Sans",system-ui,sans-serif;
   }
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
   a{color:var(--field);text-decoration-thickness:1px;text-underline-offset:3px}
   a:hover{color:var(--ink)}
   :focus-visible{outline:2px solid var(--wheat);outline-offset:3px}
-  .wrap{max-width:46rem;margin:0 auto;padding:0 1.25rem}
-  header{padding:2.25rem 0 0}
-  .wordmark{height:2.3rem;width:auto;color:var(--ink);display:block}
-  .hero{padding:clamp(4rem,12vw,8.5rem) 0 clamp(3rem,8vw,5.5rem);border-bottom:1px solid var(--rule)}
-  h1{font:400 clamp(2.5rem,6.6vw,4.4rem)/1.04 var(--serif);letter-spacing:-.01em;margin:0 0 1.75rem;max-width:14ch}
+  .wrap{max-width:52rem;margin:0 auto;padding:0 1.25rem}
+  header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:2rem 0 0}
+  .wordmark{height:1.6rem;width:auto;color:var(--ink);display:block}
+  nav{display:flex;gap:1.5rem;font-size:.9375rem}
+  nav a{color:var(--muted);text-decoration:none}
+  nav a:hover{color:var(--ink)}
+  .hero{padding:clamp(4rem,11vw,7.5rem) 0 clamp(3rem,7vw,5rem);border-bottom:1px solid var(--rule)}
+  h1{font:400 clamp(2.4rem,6vw,4rem)/1.08 var(--display);letter-spacing:-.015em;margin:0 0 1.75rem;max-width:15ch}
   .lede{font-size:1.1875rem;color:var(--muted);max-width:36rem;margin:0 0 2.25rem}
   .btn{display:inline-block;background:var(--field);color:var(--paper);text-decoration:none;font-weight:500;padding:.8rem 1.35rem;border-radius:2px}
   .btn:hover{background:var(--ink);color:var(--paper)}
-  section{padding:3.25rem 0;border-bottom:1px solid var(--rule)}
-  section:last-of-type{border-bottom:0}
-  .row{display:grid;grid-template-columns:11rem 1fr;gap:2rem}
-  h2{font:400 1.6rem/1.2 var(--serif);margin:0}
+  section{padding:3.5rem 0;border-bottom:1px solid var(--rule)}
+  .row{display:grid;grid-template-columns:12rem 1fr;gap:2.5rem}
+  h2{font:500 1.35rem/1.25 var(--display);margin:0}
   section p{margin:0 0 1rem;max-width:36rem}
   section p:last-child{margin-bottom:0}
+  dl.criteria{display:grid;grid-template-columns:9.5rem 1fr;margin:0;max-width:38rem}
+  dl.criteria dt,dl.criteria dd{padding:.8rem 0;border-top:1px solid var(--rule);margin:0}
+  dl.criteria dt:first-of-type,dl.criteria dt:first-of-type + dd{border-top:0;padding-top:0}
+  dl.criteria dt{font-weight:600}
   ul.plain{list-style:none;margin:0;padding:0;max-width:36rem}
   ul.plain li{padding:.85rem 0;border-top:1px solid var(--rule)}
   ul.plain li:first-child{border-top:0;padding-top:0}
   ul.plain strong{font-weight:600;display:block}
-  footer{padding:2.5rem 0 3.5rem;color:var(--muted);font-size:.9375rem}
-  footer p{margin:0 0 .4rem}
-  @media (max-width:640px){
-    .row{grid-template-columns:1fr;gap:1rem}
-    .wordmark{height:1.55rem}
+  .bio{display:grid;grid-template-columns:1fr;gap:1.5rem}
+  .bio img{width:9rem;height:9rem;object-fit:cover;border-radius:2px;filter:grayscale(.15)}
+  .close{padding:4rem 0 3rem;border-bottom:0}
+  .close h2{font-size:clamp(1.6rem,3.6vw,2.2rem);font-weight:400;max-width:20ch;margin-bottom:1.25rem}
+  .contact{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.25rem;margin:2rem 0 0;color:var(--muted)}
+  .contact dt{color:var(--ink);font-weight:500}
+  .contact dd{margin:0}
+  footer{padding:2rem 0 3rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.875rem}
+  @media (max-width:680px){
+    .row{grid-template-columns:1fr;gap:1.1rem}
+    dl.criteria{grid-template-columns:1fr}
+    dl.criteria dd{border-top:0;padding-top:0}
+    nav{display:none}
+    .wordmark{height:1.35rem}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <svg role="img" aria-label="Grange Hall Capital" class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 110"><g fill="currentColor"><path transform="translate(20.00,82.00) scale(0.06400,-0.06400)" d="M528 77Q503 41 460.0 18.5Q417 -4 367 -4Q262 -4 205.0 87.0Q148 178 148 345Q148 512 205.0 603.0Q262 694 368 694Q425 694 471.5 667.5Q518 641 548 592Q578 542 592 465L606 469L596 694H583L559 646Q502 677 455.5 691.5Q409 706 365 706Q279 706 207.0 658.0Q135 610 93.5 527.0Q52 444 52 345Q52 245 93.5 162.5Q135 80 207.5 32.0Q280 -16 367 -16Q419 -16 488.0 4.0Q557 24 605 68V329L687 337V345H456V337L528 329Z"/><path transform="translate(64.99,82.00) scale(0.06400,-0.06400)" d="M301 388Q301 372 290.0 361.0Q279 350 263 350Q253 350 246.5 354.5Q240 359 233 368Q226 376 220.5 380.0Q215 384 207 384Q191 384 174.5 365.0Q158 346 151 321V16L231 8V0H25V8L86 16V366L27 388V395L140 434H148V346Q204 434 253 434Q273 434 287.0 420.5Q301 407 301 388Z"/><path transform="translate(85.15,82.00) scale(0.06400,-0.06400)" d="M43 88Q43 138 88.5 168.0Q134 198 243 220V311Q243 369 230.0 391.5Q217 414 185 414Q154 414 135.0 397.5Q116 381 116 353L117 326Q117 301 107.5 286.5Q98 272 81 272Q66 272 56.5 282.0Q47 292 47 308Q47 332 70.5 360.5Q94 389 131 408Q176 433 224 433Q252 433 271.5 422.0Q291 411 300 391Q305 378 306.5 359.0Q308 340 308 286V95Q308 59 315.0 45.5Q322 32 340 32Q367 32 380 51L384 49Q372 24 352.0 10.5Q332 -3 309 -3Q283 -3 266.0 12.5Q249 28 247 54L244 55Q221 26 191.0 9.5Q161 -7 130 -7Q92 -7 67.5 19.5Q43 46 43 88ZM243 68V209Q191 196 162.5 183.0Q134 170 122.0 152.0Q110 134 110 107Q110 72 127.0 51.5Q144 31 173 31Q194 31 212.5 40.5Q231 50 243 68Z"/><path transform="translate(110.18,82.00) scale(0.06400,-0.06400)" d="M446 8V0H260V8L321 16V271Q321 310 319.0 329.0Q317 348 311 361Q303 378 284.5 387.5Q266 397 242 397Q191 397 151 354V16L212 8V0H25V8L86 16V361L27 383V390L140 429H148V366Q212 434 282 434Q313 434 338.5 420.5Q364 407 375 385Q382 372 384.0 349.5Q386 327 386 271V16Z"/><path transform="translate(139.74,82.00) scale(0.06400,-0.06400)" d="M309 400Q335 380 349.0 351.5Q363 323 363 288Q363 234 330.5 195.5Q298 157 244 146Q232 143 220 143Q168 134 139.5 118.0Q111 102 111 82Q111 68 120.0 58.5Q129 49 154.0 40.5Q179 32 229 23Q314 7 350.0 -22.0Q386 -51 386 -104Q386 -144 360.0 -176.5Q334 -209 288.0 -227.5Q242 -246 185 -246Q102 -246 56.5 -216.5Q11 -187 11 -134Q11 -97 40.5 -65.5Q70 -34 120 -18Q85 -4 69.5 13.5Q54 31 54 55Q54 83 87.5 106.0Q121 129 184 143Q122 149 83.5 189.0Q45 229 45 289Q45 353 89.5 393.5Q134 434 204 434Q260 434 301 407Q326 493 378 493Q397 493 408.0 482.5Q419 472 419 455Q419 441 409.0 431.0Q399 421 385 421Q373 421 360 432Q358 433 351.5 437.0Q345 441 338 441Q318 441 309 400ZM289 288Q289 348 265.5 386.0Q242 424 204 424Q166 424 142.5 386.0Q119 348 119 288Q119 228 142.5 190.0Q166 152 204 152Q242 152 265.5 190.0Q289 228 289 288ZM199 -40Q157 -33 130 -22Q59 -47 59 -125Q59 -178 93.5 -207.0Q128 -236 191 -236Q254 -236 291.0 -208.5Q328 -181 328 -134Q328 -96 301.0 -75.5Q274 -55 199 -40Z"/><path transform="translate(165.54,82.00) scale(0.06400,-0.06400)" d="M379 114 383 112 379 101Q359 48 319.5 19.0Q280 -10 225 -10Q171 -10 129.0 18.0Q87 46 63.5 96.0Q40 146 40 211Q40 276 65.0 327.0Q90 378 136.0 406.0Q182 434 241 434Q311 434 348.5 392.5Q386 351 387 272L381 267H111Q109 241 109 226Q109 135 146.0 87.5Q183 40 249 40Q283 40 314.5 55.5Q346 71 370 102ZM112 278 306 285Q309 297 309 325Q309 379 288.5 401.0Q268 423 230 423Q183 423 152.0 384.0Q121 345 112 278Z"/><path transform="translate(207.97,82.00) scale(0.06400,-0.06400)" d="M609 674V16L691 8V0H445V8L532 16V355H199V16L286 8V0H40V8L122 16V674L40 682V690H286V682L199 674V371H532V674L445 682V690H691V682Z"/><path transform="translate(254.75,82.00) scale(0.06400,-0.06400)" d="M43 88Q43 138 88.5 168.0Q134 198 243 220V311Q243 369 230.0 391.5Q217 414 185 414Q154 414 135.0 397.5Q116 381 116 353L117 326Q117 301 107.5 286.5Q98 272 81 272Q66 272 56.5 282.0Q47 292 47 308Q47 332 70.5 360.5Q94 389 131 408Q176 433 224 433Q252 433 271.5 422.0Q291 411 300 391Q305 378 306.5 359.0Q308 340 308 286V95Q308 59 315.0 45.5Q322 32 340 32Q367 32 380 51L384 49Q372 24 352.0 10.5Q332 -3 309 -3Q283 -3 266.0 12.5Q249 28 247 54L244 55Q221 26 191.0 9.5Q161 -7 130 -7Q92 -7 67.5 19.5Q43 46 43 88ZM243 68V209Q191 196 162.5 183.0Q134 170 122.0 152.0Q110 134 110 107Q110 72 127.0 51.5Q144 31 173 31Q194 31 212.5 40.5Q231 50 243 68Z"/><path transform="translate(279.78,82.00) scale(0.06400,-0.06400)" d="M144 721H136L20 682V675L79 653V16L18 8V0H205V8L144 16Z"/><path transform="translate(294.05,82.00) scale(0.06400,-0.06400)" d="M144 721H136L20 682V675L79 653V16L18 8V0H205V8L144 16Z"/><path transform="translate(323.68,82.00) scale(0.06400,-0.06400)" d="M367 -2Q262 -2 205.0 88.5Q148 179 148 345Q148 512 205.0 603.0Q262 694 368 694Q426 694 474.0 667.5Q522 641 552 592Q582 542 596 465L610 469L600 694H587L563 646Q505 677 457.5 691.5Q410 706 365 706Q279 706 207.0 658.0Q135 610 93.5 527.0Q52 444 52 345Q52 245 93.5 162.5Q135 80 207.5 32.0Q280 -16 367 -16Q416 -16 468.5 3.0Q521 22 566 55L600 0H613V230L600 232Q575 123 526 68Q497 36 454.5 17.0Q412 -2 367 -2Z"/><path transform="translate(366.94,82.00) scale(0.06400,-0.06400)" d="M43 88Q43 138 88.5 168.0Q134 198 243 220V311Q243 369 230.0 391.5Q217 414 185 414Q154 414 135.0 397.5Q116 381 116 353L117 326Q117 301 107.5 286.5Q98 272 81 272Q66 272 56.5 282.0Q47 292 47 308Q47 332 70.5 360.5Q94 389 131 408Q176 433 224 433Q252 433 271.5 422.0Q291 411 300 391Q305 378 306.5 359.0Q308 340 308 286V95Q308 59 315.0 45.5Q322 32 340 32Q367 32 380 51L384 49Q372 24 352.0 10.5Q332 -3 309 -3Q283 -3 266.0 12.5Q249 28 247 54L244 55Q221 26 191.0 9.5Q161 -7 130 -7Q92 -7 67.5 19.5Q43 46 43 88ZM243 68V209Q191 196 162.5 183.0Q134 170 122.0 152.0Q110 134 110 107Q110 72 127.0 51.5Q144 31 173 31Q194 31 212.5 40.5Q231 50 243 68Z"/><path transform="translate(391.97,82.00) scale(0.06400,-0.06400)" d="M226 -10Q285 -10 332.0 20.0Q379 50 405.0 103.0Q431 156 431 224Q431 284 411.0 332.0Q391 380 355.0 407.0Q319 434 275 434Q236 434 201.5 415.0Q167 396 145 363H141V434H133L20 395V388L79 366V-218L18 -226V-234H234V-227L144 -216V8Q185 -10 226 -10ZM144 71V344Q156 372 181.0 388.0Q206 404 237 404Q292 404 325.0 351.0Q358 298 358 210Q358 150 342.0 102.0Q326 54 297.5 27.0Q269 0 233 0Q197 0 170.5 21.0Q144 42 144 71Z"/><path transform="translate(422.18,82.00) scale(0.06400,-0.06400)" d="M113 626Q134 626 147.5 612.5Q161 599 161 578Q161 557 147.5 543.5Q134 530 113 530Q92 530 78.5 543.5Q65 557 65 578Q65 599 78.5 612.5Q92 626 113 626ZM151 434H143L27 395V388L86 366V16L25 8V0H212V8L151 16Z"/><path transform="translate(436.83,82.00) scale(0.06400,-0.06400)" d="M24 414 26 409H73V89Q73 58 80.0 39.0Q87 20 104 8Q129 -10 161 -10Q192 -10 219.5 8.0Q247 26 262 57L258 60Q240 42 225.0 34.0Q210 26 194 26Q161 26 149 50Q138 67 138 102V408H246L252 424H138V519L134 520Z"/><path transform="translate(453.98,82.00) scale(0.06400,-0.06400)" d="M43 88Q43 138 88.5 168.0Q134 198 243 220V311Q243 369 230.0 391.5Q217 414 185 414Q154 414 135.0 397.5Q116 381 116 353L117 326Q117 301 107.5 286.5Q98 272 81 272Q66 272 56.5 282.0Q47 292 47 308Q47 332 70.5 360.5Q94 389 131 408Q176 433 224 433Q252 433 271.5 422.0Q291 411 300 391Q305 378 306.5 359.0Q308 340 308 286V95Q308 59 315.0 45.5Q322 32 340 32Q367 32 380 51L384 49Q372 24 352.0 10.5Q332 -3 309 -3Q283 -3 266.0 12.5Q249 28 247 54L244 55Q221 26 191.0 9.5Q161 -7 130 -7Q92 -7 67.5 19.5Q43 46 43 88ZM243 68V209Q191 196 162.5 183.0Q134 170 122.0 152.0Q110 134 110 107Q110 72 127.0 51.5Q144 31 173 31Q194 31 212.5 40.5Q231 50 243 68Z"/><path transform="translate(479.01,82.00) scale(0.06400,-0.06400)" d="M144 721H136L20 682V675L79 653V16L18 8V0H205V8L144 16Z"/></g></svg>
+    <a href="#top" aria-label="Grange Hall Capital, home"><svg role="img" aria-label="Grange Hall Capital" class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 644 88"><g fill="currentColor"><path transform="translate(20.00,62.00) scale(0.04400,-0.04400)" d="M411.25 266.25H625.5Q616.5 230.75 598.625 199.75Q580.75 168.75 553.875 145.0Q527 121.25 489.875 108.125Q452.75 95 406.25 95Q337.25 95 282.125 127.0Q227 159 194.75 216.5Q162.5 274 162.5 350Q162.5 427 195.25 483.375Q228 539.75 283.25 571.125Q338.5 602.5 406.25 602.5Q478.75 602.5 530.25 572.625Q581.75 542.75 611 492.5L707.25 556.75Q676 605.75 631.75 640.375Q587.5 675 531.25 693.75Q475 712.5 406.25 712.5Q327.25 712.5 259.875 686.25Q192.5 660 142.625 611.625Q92.75 563.25 65.125 496.625Q37.5 430 37.5 350Q37.5 270 64.75 203.0Q92 136 141.375 87.125Q190.75 38.25 257.75 11.625Q324.75 -15 403.75 -15Q487.5 -15 552.625 15.375Q617.75 45.75 662.0 98.75Q706.25 151.75 728.125 220.375Q750 289 748 366.25H411.25Z"/><path transform="translate(61.80,62.00) scale(0.04400,-0.04400)" d="M222.5 333.75 445 0H587.5L350 333.75ZM77.5 700V0H196.25V700ZM148.25 597.5H288.75Q329.5 597.5 359.875 583.625Q390.25 569.75 407.25 543.625Q424.25 517.5 424.25 480Q424.25 442.75 407.25 416.5Q390.25 390.25 359.875 376.375Q329.5 362.5 288.75 362.5H148.25V265H293.75Q370.5 265 426.75 291.875Q483 318.75 514.25 368.0Q545.5 417.25 545.5 482.5Q545.5 548.75 514.25 597.5Q483 646.25 426.75 673.125Q370.5 700 293.75 700H148.25Z"/><path transform="translate(94.98,62.00) scale(0.04400,-0.04400)" d="M162 180H532L509.5 279.5H184.5ZM345 502 456.5 242.25 458.75 213 553.75 0H687.5L345 738.75L2.5 0H136.25L233.25 219.25L235 245.25Z"/><path transform="translate(132.34,62.00) scale(0.04400,-0.04400)" d="M588.75 700V230L77.5 735V0H193.75V470L705 -35V700Z"/><path transform="translate(173.80,62.00) scale(0.04400,-0.04400)" d="M411.25 266.25H625.5Q616.5 230.75 598.625 199.75Q580.75 168.75 553.875 145.0Q527 121.25 489.875 108.125Q452.75 95 406.25 95Q337.25 95 282.125 127.0Q227 159 194.75 216.5Q162.5 274 162.5 350Q162.5 427 195.25 483.375Q228 539.75 283.25 571.125Q338.5 602.5 406.25 602.5Q478.75 602.5 530.25 572.625Q581.75 542.75 611 492.5L707.25 556.75Q676 605.75 631.75 640.375Q587.5 675 531.25 693.75Q475 712.5 406.25 712.5Q327.25 712.5 259.875 686.25Q192.5 660 142.625 611.625Q92.75 563.25 65.125 496.625Q37.5 430 37.5 350Q37.5 270 64.75 203.0Q92 136 141.375 87.125Q190.75 38.25 257.75 11.625Q324.75 -15 403.75 -15Q487.5 -15 552.625 15.375Q617.75 45.75 662.0 98.75Q706.25 151.75 728.125 220.375Q750 289 748 366.25H411.25Z"/><path transform="translate(215.60,62.00) scale(0.04400,-0.04400)" d="M150.75 0H503.75V103.75H150.75ZM150.75 596.25H503.75V700H150.75ZM150.75 323.75H483.75V426.25H150.75ZM77.5 700V0H193.75V700Z"/><path transform="translate(267.92,62.00) scale(0.04400,-0.04400)" d="M124.5 321.25H624.5V430H124.5ZM547.5 700V0H666.25V700ZM77.5 700V0H196.25V700Z"/><path transform="translate(307.66,62.00) scale(0.04400,-0.04400)" d="M162 180H532L509.5 279.5H184.5ZM345 502 456.5 242.25 458.75 213 553.75 0H687.5L345 738.75L2.5 0H136.25L233.25 219.25L235 245.25Z"/><path transform="translate(345.02,62.00) scale(0.04400,-0.04400)" d="M77.5 700V0H473.75V106.25H196.25V700Z"/><path transform="translate(373.18,62.00) scale(0.04400,-0.04400)" d="M77.5 700V0H473.75V106.25H196.25V700Z"/><path transform="translate(424.35,62.00) scale(0.04400,-0.04400)" d="M102.79833984375 350Q102.79833984375 440.00048828125 141.09844970703125 508.10089111328125Q179.3985595703125 576.2012939453125 243.39886474609375 614.801513671875Q307.399169921875 653.4017333984375 385.999755859375 653.4017333984375Q434.7996826171875 653.4017333984375 475.899658203125 642.0018310546875Q516.9996337890625 630.6019287109375 551.1996459960938 609.10205078125Q585.399658203125 587.6021728515625 610.999755859375 557.80224609375V630.9998779296875Q566.999755859375 669.9998779296875 514.999755859375 689.5999145507812Q462.999755859375 709.199951171875 385.999755859375 709.199951171875Q312.999755859375 709.199951171875 250.6998291015625 682.699951171875Q188.39990234375 656.199951171875 142.0 607.8999633789062Q95.60009765625 559.5999755859375 69.8001708984375 493.79998779296875Q44.000244140625 428 44.000244140625 350Q44.000244140625 272 69.8001708984375 206.20001220703125Q95.60009765625 140.4000244140625 142.0 92.10003662109375Q188.39990234375 43.800048828125 250.6998291015625 17.300048828125Q312.999755859375 -9.199951171875 385.999755859375 -9.199951171875Q462.999755859375 -9.199951171875 514.999755859375 10.40008544921875Q566.999755859375 30.0001220703125 610.999755859375 69.0001220703125V142.5977783203125Q584.9996337890625 112.7978515625 551.399658203125 91.09796142578125Q517.7996826171875 69.3980712890625 476.89971923828125 57.9981689453125Q435.999755859375 46.5982666015625 385.999755859375 46.5982666015625Q307.399169921875 46.5982666015625 243.1988525390625 85.5985107421875Q178.99853515625 124.5987548828125 140.8984375 192.9991455078125Q102.79833984375 261.3995361328125 102.79833984375 350Z"/><path transform="translate(461.49,62.00) scale(0.04400,-0.04400)" d="M139.799560546875 234.801513671875H498.9989013671875L480.9996337890625 286.7998046875H157.798828125ZM317.999267578125 600.403564453125 456.0003662109375 266.400390625 461.2001953125 253.2008056640625 565.2003173828125 0H626.998291015625L317.999267578125 726.99951171875L9.000244140625 0H70.7982177734375L176.3983154296875 256.8006591796875L181.59814453125 269.2003173828125Z"/><path transform="translate(496.47,62.00) scale(0.04400,-0.04400)" d="M84.000244140625 700V0H139.3984375V700ZM114.999267578125 648.001708984375H247.9986572265625Q324.7991943359375 648.001708984375 373.09954833984375 608.30126953125Q421.39990234375 568.600830078125 421.39990234375 492.8001708984375Q421.39990234375 417.5994873046875 373.09954833984375 377.59906005859375Q324.7991943359375 337.5986328125 247.9986572265625 337.5986328125H114.999267578125V285.600341796875H247.9986572265625Q313.99853515625 285.600341796875 365.4984130859375 310.50030517578125Q416.998291015625 335.4002685546875 446.898193359375 382.1002197265625Q476.798095703125 428.8001708984375 476.798095703125 492.8001708984375Q476.798095703125 557.8001708984375 446.898193359375 604.0001220703125Q416.998291015625 650.2000732421875 365.4984130859375 675.1000366210938Q313.99853515625 700 247.9986572265625 700H114.999267578125Z"/><path transform="translate(526.40,62.00) scale(0.04400,-0.04400)" d="M82.0001220703125 700V0H136.998291015625V700Z"/><path transform="translate(543.03,62.00) scale(0.04400,-0.04400)" d="M14.000244140625 647.6016845703125H198.00048828125V0H253.398681640625V647.6016845703125H437.39892578125V700H14.000244140625Z"/><path transform="translate(569.88,62.00) scale(0.04400,-0.04400)" d="M139.799560546875 234.801513671875H498.9989013671875L480.9996337890625 286.7998046875H157.798828125ZM317.999267578125 600.403564453125 456.0003662109375 266.400390625 461.2001953125 253.2008056640625 565.2003173828125 0H626.998291015625L317.999267578125 726.99951171875L9.000244140625 0H70.7982177734375L176.3983154296875 256.8006591796875L181.59814453125 269.2003173828125Z"/><path transform="translate(604.86,62.00) scale(0.04400,-0.04400)" d="M84.000244140625 700V0H427.999267578125V51.998291015625H138.9984130859375V700Z"/></g></svg></a>
+    <nav aria-label="Sections"><a href="#criteria">Criteria</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   </header>
 
-  <main>
+  <main id="top">
     <div class="hero">
-      <h1>Buying a Wisconsin business to run and grow.</h1>
-      <p class="lede">Grange Hall Capital is buying one founder-owned manufacturing or specialty services company in Wisconsin, then running it ourselves for the long term. No fund, no flip, no outside clock.</p>
+      <h1>Carrying on what Wisconsin founders built.</h1>
+      <p class="lede">I'm looking to buy one founder-owned manufacturing or specialty services business in Wisconsin, and run it myself for the long term. Not a fund, not a flip, and no clock forcing a sale.</p>
       <a class="btn" href="mailto:ian@grangehallcapital.com">Email Ian</a>
     </div>
 
-    <section aria-labelledby="owners">
+    <section id="criteria" aria-labelledby="criteria-h">
       <div class="row">
-        <h2 id="owners">For owners</h2>
+        <h2 id="criteria-h">What I'm looking for</h2>
+        <dl class="criteria">
+          <dt>Size</dt><dd>$500K to $1.5M of annual EBITDA</dd>
+          <dt>Industry</dt><dd>Manufacturing, industrial services and specialty trades, especially businesses whose customers can't easily switch suppliers</dd>
+          <dt>Location</dt><dd>Wisconsin and northern Illinois</dd>
+          <dt>History</dt><dd>10+ years in business, with steady profits and repeat customers</dd>
+          <dt>Situation</dt><dd>A founder ready to step back, and a team worth keeping</dd>
+          <dt>Structure</dt><dd>Full or majority purchase, SBA-financed, with flexibility on transition and seller involvement</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section aria-labelledby="expect-h">
+      <div class="row">
+        <h2 id="expect-h">What you can expect</h2>
         <ul class="plain">
-          <li><strong>You set the pace.</strong>A first conversation is just that. Nothing moves faster than you want it to.</li>
-          <li><strong>What you built stays recognizable.</strong>We plan to keep the name, the team and the location. A business that works doesn't need to be rebuilt.</li>
-          <li><strong>We run it ourselves.</strong>The buyer is the operator. Your customers and employees deal with the person who owns the business.</li>
+          <li><strong>I run the business myself.</strong>Customers and employees deal with the owner, not a manager reporting to someone far away.</li>
+          <li><strong>The name, the people and the place stay.</strong>A business that works doesn't need to be rebuilt.</li>
+          <li><strong>The owner sets the pace.</strong>A first conversation is just a conversation.</li>
+          <li><strong>A quick, straight answer.</strong>Brokers and advisors hear yes or no within a week, with a real reason when I pass. SBA lender and deal counsel are already lined up.</li>
         </ul>
       </div>
     </section>
 
-    <section aria-labelledby="advisors">
+    <section id="about" aria-labelledby="about-h">
       <div class="row">
-        <h2 id="advisors">For brokers and advisors</h2>
-        <ul class="plain">
-          <li><strong>A fast, clear answer.</strong>A yes or no within five business days of a teaser, and a specific reason when we pass.</li>
-          <li><strong>Ready to close.</strong>SBA lender and transaction counsel relationships are already in place.</li>
-          <li><strong>One decision maker.</strong>No investment committee to wait on.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section aria-labelledby="about">
-      <div class="row">
-        <h2 id="about">About Ian</h2>
-        <div>
-          <p>Ian Markolf spent fifteen years in finance and FP&amp;A at NOV, Unilever and Kerry, much of it working alongside industrial operators and the businesses NOV acquired.</p>
-          <p>He lives in Milwaukee, where he also owns and manages rental properties himself. He is the one who gets the Sunday phone call, and he plans to be for the business he buys, too.</p>
+        <h2 id="about-h">About Ian</h2>
+        <div class="bio">
+          <img src="ian.jpg" alt="Ian Markolf" width="288" height="288" onerror="this.remove()">
+          <div>
+            <p>I spent fifteen years in finance at NOV, Unilever and Kerry, much of it inside industrial operations and the companies NOV acquired. I learned what makes a small manufacturer or service business work, and what breaks one after a sale.</p>
+            <p>I also own and manage rental properties in Milwaukee myself and hold a home inspector's license. When a furnace quits on a Sunday, I'm the one who gets the call. I intend to be that kind of owner for the business I buy.</p>
+            <p>I played basketball at UW-Madison and live in Milwaukee with my wife and our two young kids.</p>
+          </div>
         </div>
       </div>
     </section>
+
+    <section aria-labelledby="name-h">
+      <div class="row">
+        <h2 id="name-h">Why Grange Hall</h2>
+        <p>Grange halls were where rural Wisconsin did business together: farmers pooling what they had, sharing what they knew, and keeping their towns going. That's the kind of owner I want to be: local, hands-on, and invested in the people who built the place.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="close" aria-labelledby="contact-h">
+      <h2 id="contact-h">If you're thinking about what comes next for your business, let's talk.</h2>
+      <p>Founders, brokers and advisors are all welcome. Every conversation is confidential.</p>
+      <dl class="contact">
+        <dt>Email</dt><dd><a href="mailto:ian@grangehallcapital.com">ian@grangehallcapital.com</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+14140000000">(414) 000-0000</a></dd>
+        <dt>Based in</dt><dd>Milwaukee, Wisconsin</dd>
+      </dl>
+    </section>
   </main>
 
-  <footer>
-    <p>Ian Markolf, Managing Partner</p>
-    <p><a href="mailto:ian@grangehallcapital.com">ian@grangehallcapital.com</a> &nbsp;&nbsp; <a href="tel:+14140000000">(414) 000-0000</a></p>
-    <p>Milwaukee, Wisconsin</p>
-  </footer>
+  <footer>Grange Hall Capital. Ian Markolf, Managing Partner.</footer>
 </div>
 </body>
 </html>
