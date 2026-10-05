@@ -54,6 +54,18 @@
   .contact dt{color:var(--ink);font-weight:500}
   .contact dd{margin:0}
   footer{padding:2rem 0 3rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.875rem}
+
+  .band{background:var(--ink);color:#EEF2EC}
+  .band .wordmark{color:#EEF2EC}
+  .band nav a{color:#A9B8B0}
+  .band nav a:hover{color:#fff}
+  .band .hero{border-bottom:0;padding-bottom:clamp(3.5rem,8vw,6rem)}
+  .band h1{color:#F3F5F1}
+  .band .lede{color:#B9C6BF}
+  .band .btn{background:#EEF2EC;color:var(--ink)}
+  .band .btn:hover{background:#fff;color:var(--ink)}
+  .band :focus-visible{outline-color:#D9B86A}
+  main > section:first-child{padding-top:4rem}
   @media (max-width:680px){
     .row{grid-template-columns:1fr;gap:1.1rem}
     dl.criteria{grid-template-columns:1fr}
@@ -64,18 +76,20 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="band"><div class="wrap">
   <header>
     <a href="#top" aria-label="Grange Hall Capital, home"><svg role="img" aria-label="Grange Hall Capital" class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 644 88"><g fill="currentColor"><path transform="translate(20.00,62.00) scale(0.04400,-0.04400)" d="M411.25 266.25H625.5Q616.5 230.75 598.625 199.75Q580.75 168.75 553.875 145.0Q527 121.25 489.875 108.125Q452.75 95 406.25 95Q337.25 95 282.125 127.0Q227 159 194.75 216.5Q162.5 274 162.5 350Q162.5 427 195.25 483.375Q228 539.75 283.25 571.125Q338.5 602.5 406.25 602.5Q478.75 602.5 530.25 572.625Q581.75 542.75 611 492.5L707.25 556.75Q676 605.75 631.75 640.375Q587.5 675 531.25 693.75Q475 712.5 406.25 712.5Q327.25 712.5 259.875 686.25Q192.5 660 142.625 611.625Q92.75 563.25 65.125 496.625Q37.5 430 37.5 350Q37.5 270 64.75 203.0Q92 136 141.375 87.125Q190.75 38.25 257.75 11.625Q324.75 -15 403.75 -15Q487.5 -15 552.625 15.375Q617.75 45.75 662.0 98.75Q706.25 151.75 728.125 220.375Q750 289 748 366.25H411.25Z"/><path transform="translate(61.80,62.00) scale(0.04400,-0.04400)" d="M222.5 333.75 445 0H587.5L350 333.75ZM77.5 700V0H196.25V700ZM148.25 597.5H288.75Q329.5 597.5 359.875 583.625Q390.25 569.75 407.25 543.625Q424.25 517.5 424.25 480Q424.25 442.75 407.25 416.5Q390.25 390.25 359.875 376.375Q329.5 362.5 288.75 362.5H148.25V265H293.75Q370.5 265 426.75 291.875Q483 318.75 514.25 368.0Q545.5 417.25 545.5 482.5Q545.5 548.75 514.25 597.5Q483 646.25 426.75 673.125Q370.5 700 293.75 700H148.25Z"/><path transform="translate(94.98,62.00) scale(0.04400,-0.04400)" d="M162 180H532L509.5 279.5H184.5ZM345 502 456.5 242.25 458.75 213 553.75 0H687.5L345 738.75L2.5 0H136.25L233.25 219.25L235 245.25Z"/><path transform="translate(132.34,62.00) scale(0.04400,-0.04400)" d="M588.75 700V230L77.5 735V0H193.75V470L705 -35V700Z"/><path transform="translate(173.80,62.00) scale(0.04400,-0.04400)" d="M411.25 266.25H625.5Q616.5 230.75 598.625 199.75Q580.75 168.75 553.875 145.0Q527 121.25 489.875 108.125Q452.75 95 406.25 95Q337.25 95 282.125 127.0Q227 159 194.75 216.5Q162.5 274 162.5 350Q162.5 427 195.25 483.375Q228 539.75 283.25 571.125Q338.5 602.5 406.25 602.5Q478.75 602.5 530.25 572.625Q581.75 542.75 611 492.5L707.25 556.75Q676 605.75 631.75 640.375Q587.5 675 531.25 693.75Q475 712.5 406.25 712.5Q327.25 712.5 259.875 686.25Q192.5 660 142.625 611.625Q92.75 563.25 65.125 496.625Q37.5 430 37.5 350Q37.5 270 64.75 203.0Q92 136 141.375 87.125Q190.75 38.25 257.75 11.625Q324.75 -15 403.75 -15Q487.5 -15 552.625 15.375Q617.75 45.75 662.0 98.75Q706.25 151.75 728.125 220.375Q750 289 748 366.25H411.25Z"/><path transform="translate(215.60,62.00) scale(0.04400,-0.04400)" d="M150.75 0H503.75V103.75H150.75ZM150.75 596.25H503.75V700H150.75ZM150.75 323.75H483.75V426.25H150.75ZM77.5 700V0H193.75V700Z"/><path transform="translate(267.92,62.00) scale(0.04400,-0.04400)" d="M124.5 321.25H624.5V430H124.5ZM547.5 700V0H666.25V700ZM77.5 700V0H196.25V700Z"/><path transform="translate(307.66,62.00) scale(0.04400,-0.04400)" d="M162 180H532L509.5 279.5H184.5ZM345 502 456.5 242.25 458.75 213 553.75 0H687.5L345 738.75L2.5 0H136.25L233.25 219.25L235 245.25Z"/><path transform="translate(345.02,62.00) scale(0.04400,-0.04400)" d="M77.5 700V0H473.75V106.25H196.25V700Z"/><path transform="translate(373.18,62.00) scale(0.04400,-0.04400)" d="M77.5 700V0H473.75V106.25H196.25V700Z"/><path transform="translate(424.35,62.00) scale(0.04400,-0.04400)" d="M102.79833984375 350Q102.79833984375 440.00048828125 141.09844970703125 508.10089111328125Q179.3985595703125 576.2012939453125 243.39886474609375 614.801513671875Q307.399169921875 653.4017333984375 385.999755859375 653.4017333984375Q434.7996826171875 653.4017333984375 475.899658203125 642.0018310546875Q516.9996337890625 630.6019287109375 551.1996459960938 609.10205078125Q585.399658203125 587.6021728515625 610.999755859375 557.80224609375V630.9998779296875Q566.999755859375 669.9998779296875 514.999755859375 689.5999145507812Q462.999755859375 709.199951171875 385.999755859375 709.199951171875Q312.999755859375 709.199951171875 250.6998291015625 682.699951171875Q188.39990234375 656.199951171875 142.0 607.8999633789062Q95.60009765625 559.5999755859375 69.8001708984375 493.79998779296875Q44.000244140625 428 44.000244140625 350Q44.000244140625 272 69.8001708984375 206.20001220703125Q95.60009765625 140.4000244140625 142.0 92.10003662109375Q188.39990234375 43.800048828125 250.6998291015625 17.300048828125Q312.999755859375 -9.199951171875 385.999755859375 -9.199951171875Q462.999755859375 -9.199951171875 514.999755859375 10.40008544921875Q566.999755859375 30.0001220703125 610.999755859375 69.0001220703125V142.5977783203125Q584.9996337890625 112.7978515625 551.399658203125 91.09796142578125Q517.7996826171875 69.3980712890625 476.89971923828125 57.9981689453125Q435.999755859375 46.5982666015625 385.999755859375 46.5982666015625Q307.399169921875 46.5982666015625 243.1988525390625 85.5985107421875Q178.99853515625 124.5987548828125 140.8984375 192.9991455078125Q102.79833984375 261.3995361328125 102.79833984375 350Z"/><path transform="translate(461.49,62.00) scale(0.04400,-0.04400)" d="M139.799560546875 234.801513671875H498.9989013671875L480.9996337890625 286.7998046875H157.798828125ZM317.999267578125 600.403564453125 456.0003662109375 266.400390625 461.2001953125 253.2008056640625 565.2003173828125 0H626.998291015625L317.999267578125 726.99951171875L9.000244140625 0H70.7982177734375L176.3983154296875 256.8006591796875L181.59814453125 269.2003173828125Z"/><path transform="translate(496.47,62.00) scale(0.04400,-0.04400)" d="M84.000244140625 700V0H139.3984375V700ZM114.999267578125 648.001708984375H247.9986572265625Q324.7991943359375 648.001708984375 373.09954833984375 608.30126953125Q421.39990234375 568.600830078125 421.39990234375 492.8001708984375Q421.39990234375 417.5994873046875 373.09954833984375 377.59906005859375Q324.7991943359375 337.5986328125 247.9986572265625 337.5986328125H114.999267578125V285.600341796875H247.9986572265625Q313.99853515625 285.600341796875 365.4984130859375 310.50030517578125Q416.998291015625 335.4002685546875 446.898193359375 382.1002197265625Q476.798095703125 428.8001708984375 476.798095703125 492.8001708984375Q476.798095703125 557.8001708984375 446.898193359375 604.0001220703125Q416.998291015625 650.2000732421875 365.4984130859375 675.1000366210938Q313.99853515625 700 247.9986572265625 700H114.999267578125Z"/><path transform="translate(526.40,62.00) scale(0.04400,-0.04400)" d="M82.0001220703125 700V0H136.998291015625V700Z"/><path transform="translate(543.03,62.00) scale(0.04400,-0.04400)" d="M14.000244140625 647.6016845703125H198.00048828125V0H253.398681640625V647.6016845703125H437.39892578125V700H14.000244140625Z"/><path transform="translate(569.88,62.00) scale(0.04400,-0.04400)" d="M139.799560546875 234.801513671875H498.9989013671875L480.9996337890625 286.7998046875H157.798828125ZM317.999267578125 600.403564453125 456.0003662109375 266.400390625 461.2001953125 253.2008056640625 565.2003173828125 0H626.998291015625L317.999267578125 726.99951171875L9.000244140625 0H70.7982177734375L176.3983154296875 256.8006591796875L181.59814453125 269.2003173828125Z"/><path transform="translate(604.86,62.00) scale(0.04400,-0.04400)" d="M84.000244140625 700V0H427.999267578125V51.998291015625H138.9984130859375V700Z"/></g></svg></a>
     <nav aria-label="Sections"><a href="#criteria">Criteria</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   </header>
 
-  <main id="top">
-    <div class="hero">
+  <div class="hero" id="top">
       <h1>Carrying on what Wisconsin founders built.</h1>
-      <p class="lede">I'm looking to buy one founder-owned manufacturing or specialty services business in Wisconsin, and run it myself for the long term. Not a fund, not a flip, and no clock forcing a sale.</p>
+      <p class="lede">I'm looking to buy one founder-owned manufacturing or specialty services business in Wisconsin, and run it myself for the long term. I'm self-funded, so there are no outside investors setting the timeline.</p>
       <a class="btn" href="mailto:ian@grangehallcapital.com">Email Ian</a>
-    </div>
+  </div>
+</div></div>
+<div class="wrap">
+  <main>
 
     <section id="criteria" aria-labelledby="criteria-h">
       <div class="row">
@@ -85,7 +99,7 @@
           <dt>Industry</dt><dd>Manufacturing, industrial services and specialty trades, especially businesses whose customers can't easily switch suppliers</dd>
           <dt>Location</dt><dd>Wisconsin and northern Illinois</dd>
           <dt>History</dt><dd>10+ years in business, with steady profits and repeat customers</dd>
-          <dt>Situation</dt><dd>A founder ready to step back, and a team worth keeping</dd>
+          <dt>Situation</dt><dd>A founder ready to step back, and an experienced team in place</dd>
           <dt>Structure</dt><dd>Full or majority purchase, SBA-financed, with flexibility on transition and seller involvement</dd>
         </dl>
       </div>
@@ -109,9 +123,9 @@
         <div class="bio">
           <img src="ian.jpg" alt="Ian Markolf" width="288" height="288" onerror="this.remove()">
           <div>
-            <p>I spent fifteen years in finance at NOV, Unilever and Kerry, much of it inside industrial operations and the companies NOV acquired. I learned what makes a small manufacturer or service business work, and what breaks one after a sale.</p>
+            <p>I spent ten years in corporate finance at NOV, Unilever and Kerry, much of it inside industrial operations and the companies NOV acquired. I saw up close what makes a manufacturer or service business work, and what breaks one after a sale.</p>
             <p>I also own and manage rental properties in Milwaukee myself and hold a home inspector's license. When a furnace quits on a Sunday, I'm the one who gets the call. I intend to be that kind of owner for the business I buy.</p>
-            <p>I played basketball at UW-Madison and live in Milwaukee with my wife and our two young kids.</p>
+            <p>My wife, Jaimie, is an engineering leader who has led two post-acquisition integrations herself, and she's my partner in this. We live in Milwaukee with our two young kids. I played basketball at UW-Madison.</p>
           </div>
         </div>
       </div>
@@ -129,7 +143,7 @@
       <p>Founders, brokers and advisors are all welcome. Every conversation is confidential.</p>
       <dl class="contact">
         <dt>Email</dt><dd><a href="mailto:ian@grangehallcapital.com">ian@grangehallcapital.com</a></dd>
-        <dt>Phone</dt><dd><a href="tel:+14140000000">(414) 000-0000</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+14142061017">(414) 206-1017</a></dd>
         <dt>Based in</dt><dd>Milwaukee, Wisconsin</dd>
       </dl>
     </section>
