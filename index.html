@@ -44,7 +44,7 @@ nav a.cta:hover{background:#fff;color:var(--ink)}
 .hero{background:var(--ink);color:#EEF2EC}
 .hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:4rem;align-items:end;padding-top:clamp(4.5rem,10vw,8rem);padding-bottom:clamp(4rem,8vw,6.5rem)}
 .eyebrow{font:500 .75rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--wheat-lt);margin:0 0 1.75rem}
-h1{font:400 clamp(2.6rem,5.6vw,4.4rem)/1.05 var(--display);letter-spacing:-.02em;margin:0 0 1.75rem;color:#F3F5F1}
+h1{font:500 clamp(2.6rem,5.6vw,4.4rem)/1.05 var(--display);letter-spacing:-.025em;margin:0 0 1.75rem;color:#F3F5F1}
 .lede{font-size:1.15rem;line-height:1.65;color:#B9C6BF;max-width:34rem;margin:0 0 2.5rem}
 .btn{display:inline-block;background:#EEF2EC;color:var(--ink);text-decoration:none;font-weight:500;font-size:.9375rem;padding:.9rem 1.5rem;border-radius:2px}
 .btn:hover{background:#fff;color:var(--ink)}
@@ -64,7 +64,7 @@ section{padding:clamp(4.5rem,9vw,7rem) 0;border-top:1px solid var(--rule)}
 main section:first-child{border-top:0}
 .sec{display:grid;grid-template-columns:16rem 1fr;gap:4rem}
 .label{font:500 .75rem/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--wheat);margin:.55rem 0 0}
-h2.title{font:400 clamp(1.75rem,3.2vw,2.4rem)/1.18 var(--display);letter-spacing:-.01em;margin:0 0 2.5rem;max-width:22ch}
+h2.title{font:500 clamp(1.75rem,3.2vw,2.4rem)/1.15 var(--display);letter-spacing:-.01em;margin:0 0 2.5rem;max-width:22ch}
 h3{font:500 1.0625rem/1.35 var(--display);margin:0 0 .6rem;letter-spacing:.01em}
 p{margin:0 0 1rem;max-width:40rem}
 p:last-child{margin-bottom:0}
@@ -89,9 +89,9 @@ ul.terms li:nth-child(even){padding-left:2rem;padding-right:0;border-left:1px so
 ul.terms h3{margin-bottom:.4rem}
 ul.terms p{font-size:.9875rem;color:var(--muted)}
 
-.person{display:grid;grid-template-columns:13rem 1fr;gap:3rem;align-items:start}
-.portrait{width:13rem;aspect-ratio:1;background:var(--ink);display:grid;place-items:center;overflow:hidden}
-.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.person{display:grid;grid-template-columns:20rem 1fr;gap:3.5rem;align-items:start}
+.portrait{position:relative;width:20rem;aspect-ratio:1;background:var(--ink);display:grid;place-items:center;overflow:hidden}
+.portrait img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
 .portrait .mono{width:42%;height:auto}
 .portrait .mono rect{fill:transparent}
 .person h2{font:400 1.9rem/1.15 var(--display);margin:0 0 .35rem}
@@ -114,6 +114,22 @@ ul.plain strong{display:block;font-weight:600}
 .faq details[open] summary::after{content:"\2212"}
 .faq details p{margin:.75rem 0 0;color:var(--muted)}
 
+.accent{color:var(--wheat-lt)}
+/* statement band */
+.statement{background:var(--paper-2);border-top:0;padding:clamp(4.5rem,9vw,7rem) 0}
+.statement p.big{font:500 clamp(2rem,4.6vw,3.6rem)/1.1 var(--display);letter-spacing:-.02em;max-width:20ch;margin:0 0 1.5rem;color:var(--ink)}
+.statement p.big em{font-style:normal;color:var(--wheat)}
+.statement p.sub{font-size:1.125rem;color:var(--muted);max-width:40rem;margin:0}
+/* focus cards */
+.focus{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.focus article{background:#fff;border:1px solid var(--rule);display:flex;flex-direction:column}
+.focus .img{aspect-ratio:4/3;background:var(--ink);display:grid;place-items:center;overflow:hidden}
+.focus .img img{width:100%;height:100%;object-fit:cover;display:block}
+.focus .img span{font:500 .75rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted-dk)}
+.focus .body{padding:1.5rem 1.5rem 1.75rem}
+.focus .n{font:500 .8125rem/1 var(--display);color:var(--wheat);display:block;margin-bottom:.9rem}
+.focus p{font-size:.9875rem;color:var(--muted)}
+.focus-note{margin-top:1.75rem;font-size:.9375rem;color:var(--muted)}
 /* closing band + footer */
 .closing{background:var(--ink);color:#EEF2EC;border-top:0}
 .closing .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:end}
@@ -140,7 +156,7 @@ ul.plain strong{display:block;font-weight:600}
   .wrap{padding:0 1.25rem}
   nav a:not(.cta){display:none}
   .wordmark{height:1.2rem}
-  .pillars{grid-template-columns:1fr}
+  .pillars,.focus{grid-template-columns:1fr}
   .pillars > div,.pillars > div + div{padding:1.5rem 0;border-left:0;border-bottom:1px solid var(--rule)}
   ul.terms{grid-template-columns:1fr}
   ul.terms li,ul.terms li:nth-child(even){padding:1.35rem 0;border-left:0}
@@ -148,7 +164,7 @@ ul.plain strong{display:block;font-weight:600}
   table.crit th{padding-top:1.1rem;padding-bottom:.25rem;border-bottom:0}
   table.crit td{padding-bottom:1.1rem}
   .person{grid-template-columns:1fr;gap:1.75rem}
-  .portrait{width:9rem}
+  .portrait{width:12rem}
   .link-lt{display:block;margin:1.25rem 0 0}
 }
 </style>
@@ -166,7 +182,7 @@ ul.plain strong{display:block;font-weight:600}
 <div class="hero" id="top"><div class="wrap">
   <div>
     <p class="eyebrow">Milwaukee, Wisconsin</p>
-    <h1>Carrying on what Wisconsin founders built.</h1>
+    <h1>Carrying on what Wisconsin founders <span class="accent">built.</span></h1>
     <p class="lede">Grange Hall Capital is acquiring one founder-owned Wisconsin business, ideally in manufacturing, industrial services or specialty trades, to own and operate for the long term.</p>
     <a class="btn" href="#contact">Let's connect</a><a class="link-lt" href="#criteria">View criteria</a>
   </div>
@@ -174,40 +190,56 @@ ul.plain strong{display:block;font-weight:600}
   <aside class="glance" aria-labelledby="glance-h">
     <h2 id="glance-h">At a glance</h2>
     <dl>
-      <div><dt>EBITDA</dt><dd>$500K to $1.5M</dd></div>
+      <div><dt>EBITDA</dt><dd>$500K to $2M</dd></div>
       <div><dt>Geography</dt><dd>Wisconsin and northern Illinois</dd></div>
       <div><dt>Focus</dt><dd>Manufacturing, industrial services, specialty trades</dd></div>
-      <div><dt>Financing</dt><dd>SBA 7(a), buyer equity, seller financing</dd></div>
+      <div><dt>Financing</dt><dd>SBA 7(a), equity partners, seller financing</dd></div>
       <div><dt>Hold</dt><dd>Long-term, owner-operated</dd></div>
     </dl>
   </aside>
 </div></div>
 
 <main>
+<section class="statement" aria-label="Philosophy"><div class="wrap">
+  <p class="big">Closer to <em>local equity</em> than private equity.</p>
+  <p class="sub">One Wisconsin business, owned and run for the long term. No fund, no planned exit, and built around the people who made it work.</p>
+</div></section>
 <section id="approach"><div class="wrap sec">
   <p class="label">Approach</p>
   <div>
-    <h2 class="title">Closer to local equity than private equity.</h2>
+    <h2 class="title">Owned and operated for the long term.</h2>
     <div class="pillars">
       <div><span class="n">01</span><h3>Long-term ownership</h3><p>No fund and no planned exit. One business, owned and grown for decades.</p></div>
       <div><span class="n">02</span><h3>Owner-operated</h3><p>Ian runs the business day to day. The name, the team and the location are expected to stay.</p></div>
-      <div><span class="n">03</span><h3>Straightforward process</h3><p>Fast, candid feedback on every opportunity. SBA 7(a) financing with buyer equity and seller participation.</p></div>
+      <div><span class="n">03</span><h3>Straightforward process</h3><p>Fast, candid feedback on every opportunity. SBA 7(a) financing with equity partners and seller participation.</p></div>
     </div>
   </div>
 </div></section>
 
+<section id="focus"><div class="wrap sec">
+  <p class="label">Focus</p>
+  <div>
+    <h2 class="title">Where Grange Hall Capital invests.</h2>
+    <div class="focus">
+      <article><div class="img"><span>Manufacturing</span></div><div class="body"><span class="n">01</span><h3>Manufacturing</h3><p>Makers of components and products other businesses build into their own, where quality and reliability keep customers coming back.</p></div></article>
+      <article><div class="img"><span>Industrial services</span></div><div class="body"><span class="n">02</span><h3>Industrial services</h3><p>Companies that install, maintain, test or repair the equipment and systems industrial customers depend on every day.</p></div></article>
+      <article><div class="img"><span>Specialty trades</span></div><div class="body"><span class="n">03</span><h3>Specialty trades</h3><p>Licensed contractors customers rely on for skilled work they can't do themselves and can't easily replace.</p></div></article>
+    </div>
+    <p class="focus-note">Strong businesses in other industries are considered when customers rely on them and can't easily switch.</p>
+  </div>
+</div></section>
 <!-- ===== CRITERIA: edit this block (and the "At a glance" box above) when the thesis changes ===== -->
 <section id="criteria"><div class="wrap sec">
   <p class="label">Acquisition criteria</p>
   <div>
     <h2 class="title">What Grange Hall Capital is looking for.</h2>
     <table class="crit">
-      <tr><th scope="row">EBITDA</th><td>$500K to $1.5M</td></tr>
+      <tr><th scope="row">EBITDA</th><td>$500K to $2M</td></tr>
       <tr><th scope="row">Industries</th><td><strong>Manufacturing, industrial services and specialty trades first.</strong> Strong businesses in other industries considered when customers rely on them and can't easily switch.</td></tr>
       <tr><th scope="row">Geography</th><td>Wisconsin first, and northern Illinois within driving distance of Milwaukee</td></tr>
       <tr><th scope="row">History</th><td>10+ years in business, with steady profits and repeat customers</td></tr>
       <tr><th scope="row">Situation</th><td>Founder ready to step back, experienced team in place</td></tr>
-      <tr><th scope="row">Structure</th><td>Full or majority purchase, SBA-financed, flexible on transition and seller involvement</td></tr>
+      <tr><th scope="row">Structure</th><td>Full or majority purchase, financed with SBA debt and equity partners, flexible on transition and seller involvement</td></tr>
     </table>
   </div>
 </div></section>
@@ -233,9 +265,9 @@ ul.plain strong{display:block;font-weight:600}
       <div>
         <h2 id="about-h">Ian Markolf</h2>
         <p class="role">Managing Partner</p>
-        <p>Ian started Grange Hall Capital to acquire and lead one Wisconsin business for the long term. He spent ten years in corporate finance at NOV, Unilever and Kerry, working alongside operations teams and inside the companies NOV acquired.</p>
+        <p>Ian started Grange Hall Capital to acquire and lead one Wisconsin business for the long term. He spent nearly ten years in corporate finance at NOV, Unilever and Kerry, working alongside operations teams and inside the companies NOV acquired.</p>
         <p>He grew up in San Antonio and came to Wisconsin for college and basketball. He lives in Milwaukee with his wife, Jaimie, a software engineering leader who has led two post-acquisition integrations, and their two young children.</p>
-        <div class="creds"><span><strong>10 years</strong> corporate finance</span><span><strong>NOV &middot; Unilever &middot; Kerry</strong></span><span><strong>Milwaukee</strong> based</span></div>
+        <div class="creds"><span><strong>Nearly 10 years</strong> corporate finance</span><span><strong>NOV &middot; Unilever &middot; Kerry</strong></span><span><strong>Milwaukee</strong> based</span></div>
       </div>
     </div>
   </div>
