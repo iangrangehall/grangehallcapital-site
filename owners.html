@@ -96,8 +96,8 @@ ul.terms p{font-size:.9875rem;color:var(--muted)}
 .creds strong{color:var(--ink);font-weight:600}
 
 ol.steps{list-style:none;counter-reset:s;margin:0;padding:0;border-top:1px solid var(--ink);max-width:46rem}
-ol.steps li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;padding:1.35rem 0;border-bottom:1px solid var(--rule)}
-ol.steps li::before{content:counter(s,decimal-leading-zero);font:500 .875rem/1.7 var(--display);color:var(--wheat)}
+ol.steps li{counter-increment:s;position:relative;padding:1.35rem 0 1.35rem 3rem;border-bottom:1px solid var(--rule)}
+ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:1.35rem;font:500 .875rem/1.7 var(--display);color:var(--wheat)}
 ol.steps strong{display:block;font-weight:600}
 ul.plain{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);max-width:46rem}
 ul.plain li{padding:1.35rem 0;border-bottom:1px solid var(--rule)}
